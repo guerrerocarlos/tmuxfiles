@@ -34,6 +34,12 @@ git pull
 - Stable pane layouts across clients with different terminal sizes.
 - True color support.
 - Clipboard integration.
+- Faster escape handling for vi-style workflows.
+- Focus events for terminal applications.
+- Better modified-key handling with `xterm-keys`.
+- New windows and split panes open in the active pane's path.
+- `prefix+|` and `prefix+-` split pane aliases.
+- `prefix+R` reloads the tmux config.
 - Pane paths in pane borders.
 - Active pane paths in the tmux status window list.
 - Pane paths in the `prefix+s` and `prefix+w` pickers.
