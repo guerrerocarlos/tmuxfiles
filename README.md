@@ -63,10 +63,12 @@ Ctrl-b c      new window
 Ctrl-b %      split pane horizontally
 Ctrl-b "      split pane vertically
 Ctrl-b arrow  move between panes
-Ctrl-b h/j/k/l move between panes
+Ctrl-b H/J/K/L move between panes
 Ctrl-b ,      rename window
 Ctrl-b $      rename session
 ```
+
+Windows and panes are different. The items in the tmux status line are windows; switch between them with `Ctrl-b n`, `Ctrl-b p`, `Ctrl-b l`, or `Ctrl-b 1` through `Ctrl-b 9`. Pane movement only does something after a window has been split with `Ctrl-b |`, `Ctrl-b -`, `Ctrl-b %`, or `Ctrl-b "`.
 
 ## Current Features
 
@@ -82,7 +84,7 @@ Ctrl-b $      rename session
 - New windows and split panes open in the active pane's path.
 - `prefix+|` and `prefix+-` split pane aliases.
 - `prefix+R` reloads the tmux config.
-- `prefix+h/j/k/l` moves between panes.
+- `prefix+H/J/K/L` moves between panes.
 - Pane borders are hidden.
 - Active pane paths in the tmux status window list.
 - Pane paths in the `prefix+s` and `prefix+w` pickers.
