@@ -64,11 +64,72 @@ Ctrl-b %      split pane horizontally
 Ctrl-b "      split pane vertically
 Ctrl-b arrow  move between panes
 Ctrl-b H/J/K/L move between panes
+Ctrl-b Ctrl-arrow resize current pane by one cell
+Ctrl-b Alt-arrow  resize current pane by five cells
 Ctrl-b ,      rename window
 Ctrl-b $      rename session
 ```
 
-Windows and panes are different. The items in the tmux status line are windows; switch between them with `Ctrl-b n`, `Ctrl-b p`, `Ctrl-b l`, or `Ctrl-b 1` through `Ctrl-b 9`. Pane movement only does something after a window has been split with `Ctrl-b |`, `Ctrl-b -`, `Ctrl-b %`, or `Ctrl-b "`.
+## Navigation
+
+Windows and panes are different. The items in the tmux status line are windows. Pane movement only does something after a window has been split with `Ctrl-b |`, `Ctrl-b -`, `Ctrl-b %`, or `Ctrl-b "`.
+
+### Sessions
+
+```text
+Ctrl-b s      choose a session from a list
+Ctrl-b (      previous session
+Ctrl-b )      next session
+Ctrl-b L      last session/client
+Ctrl-b $      rename current session
+```
+
+From the shell:
+
+```bash
+tmux ls
+tmux attach -t session-name
+tmux switch-client -t session-name
+```
+
+### Windows
+
+```text
+Ctrl-b n      next window
+Ctrl-b p      previous window
+Ctrl-b l      last window
+Ctrl-b 1..9   switch to window by number
+Ctrl-b w      choose a window from a list
+```
+
+### Panes
+
+```text
+Ctrl-b |      split pane left/right
+Ctrl-b -      split pane top/bottom
+Ctrl-b %      split pane horizontally
+Ctrl-b "      split pane vertically
+Ctrl-b arrow  move between panes
+Ctrl-b H      move to pane on the left
+Ctrl-b J      move to pane below
+Ctrl-b K      move to pane above
+Ctrl-b L      move to pane on the right
+```
+
+### Resizing Panes
+
+```text
+Ctrl-b Ctrl-Up       resize current pane up
+Ctrl-b Ctrl-Down     resize current pane down
+Ctrl-b Ctrl-Left     resize current pane left
+Ctrl-b Ctrl-Right    resize current pane right
+Ctrl-b Alt-Up        resize current pane up by 5
+Ctrl-b Alt-Down      resize current pane down by 5
+Ctrl-b Alt-Left      resize current pane left by 5
+Ctrl-b Alt-Right     resize current pane right by 5
+```
+
+The arrow direction is the direction you want the pane edge to move. If resizing does nothing, the pane may already be against that outer edge or there may not be a neighboring pane in that direction.
 
 ## Current Features
 
