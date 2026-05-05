@@ -63,6 +63,7 @@ Ctrl-b c      new window
 Ctrl-b %      split pane horizontally
 Ctrl-b "      split pane vertically
 Ctrl-b arrow  move between panes
+Ctrl-b h/j/k/l move between panes
 Ctrl-b H/J/K/L move between panes
 Ctrl-b Ctrl-arrow resize current pane by one cell
 Ctrl-b Alt-arrow  resize current pane by five cells
@@ -80,7 +81,6 @@ Windows and panes are different. The items in the tmux status line are windows. 
 Ctrl-b s      choose a session from a list
 Ctrl-b (      previous session
 Ctrl-b )      next session
-Ctrl-b L      last session/client
 Ctrl-b $      rename current session
 ```
 
@@ -97,7 +97,7 @@ tmux switch-client -t session-name
 ```text
 Ctrl-b n      next window
 Ctrl-b p      previous window
-Ctrl-b l      last window
+Ctrl-b Ctrl-l last window
 Ctrl-b 1..9   switch to window by number
 Ctrl-b w      choose a window from a list
 ```
@@ -110,6 +110,10 @@ Ctrl-b -      split pane top/bottom
 Ctrl-b %      split pane horizontally
 Ctrl-b "      split pane vertically
 Ctrl-b arrow  move between panes
+Ctrl-b h      move to pane on the left
+Ctrl-b j      move to pane below
+Ctrl-b k      move to pane above
+Ctrl-b l      move to pane on the right
 Ctrl-b H      move to pane on the left
 Ctrl-b J      move to pane below
 Ctrl-b K      move to pane above
@@ -145,7 +149,7 @@ The arrow direction is the direction you want the pane edge to move. If resizing
 - New windows and split panes open in the active pane's path.
 - `prefix+|` and `prefix+-` split pane aliases.
 - `prefix+R` reloads the tmux config.
-- `prefix+H/J/K/L` moves between panes.
+- `prefix+h/j/k/l` and `prefix+H/J/K/L` move between panes.
 - Pane borders are hidden.
 - Active pane paths in the tmux status window list.
 - Pane paths in the `prefix+s` and `prefix+w` pickers.
