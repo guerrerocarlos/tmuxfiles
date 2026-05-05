@@ -81,6 +81,6 @@ Ctrl-b $      rename session
 - New windows and split panes open in the active pane's path.
 - `prefix+|` and `prefix+-` split pane aliases.
 - `prefix+R` reloads the tmux config.
-- Pane paths in pane borders.
+- Pane indexes in pane borders.
 - Active pane paths in the tmux status window list.
 - Pane paths in the `prefix+s` and `prefix+w` pickers.
